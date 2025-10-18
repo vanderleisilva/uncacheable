@@ -11,7 +11,6 @@ This diagram shows the MobilityCorp vehicle-sharing platform in its external con
 - **Vehicles**: IoT-enabled electric scooters, eBikes, cars, and vans sending telemetry
 - **Payment Gateway**: External payment processing (Stripe/similar)
 - **Map Services**: External mapping and routing (Google Maps/similar)
-- **Regulatory Systems**: Government compliance and reporting systems
 - **AI/ML Platform**: External LLM provider for GenAI capabilities
 
 ## Diagram
@@ -28,7 +27,6 @@ C4Context
     System_Ext(vehicles, "Fleet Vehicles", "Electric scooters, eBikes, cars & vans with IoT sensors and telemetry")
     System_Ext(payment, "Payment Gateway", "Processes payments and refunds (Stripe/similar)")
     System_Ext(maps, "Map Services", "Provides mapping, routing, and location services")
-    System_Ext(regulatory, "Regulatory Systems", "Government compliance and reporting")
     System_Ext(llm_provider, "AI/ML Platform", "External LLM provider for GenAI services")
 
     Rel(customer, mobility_system, "Books vehicles, views trips, requests support", "HTTPS/Mobile App")
@@ -37,7 +35,6 @@ C4Context
     Rel(mobility_system, vehicles, "Sends commands (lock/unlock), receives telemetry", "MQTT/IoT")
     Rel(mobility_system, payment, "Processes payments", "HTTPS/API")
     Rel(mobility_system, maps, "Gets locations, routes", "HTTPS/API")
-    Rel(mobility_system, regulatory, "Submits compliance reports", "HTTPS/API")
     Rel(mobility_system, llm_provider, "Sends prompts, receives AI responses", "HTTPS/API")
 
     UpdateRelStyle(customer, mobility_system, $offsetY="-40", $offsetX="-50")
