@@ -15,17 +15,17 @@ Traditional vehicle-sharing platforms struggle with:
 - Difficulty maintaining service quality at scale
 - Complex compliance requirements for AI in safety-critical systems
 
-### Our Solution
+### Our Solution: GenAI as a Safety-First Bounded Context
 
-We leverage **GenAI with RAG (Retrieval-Augmented Generation)** and **Human-in-the-Loop (HITL)** controls to deliver:
+MobilityCorp delivers an **AI-augmented operations platform** that reduces costs while maintaining safety through:
 
-- TODO
+- **Intelligent Customer Support**: AI-powered conversational assistant handles 40% of support queries with RAG-grounded responses and full citation traceability
+- **Proactive Safety Management**: Real-time anomaly detection with natural language explanations, requiring human approval for high-risk actions (HITL)
+- **Automated Incident Intelligence**: 10x faster incident investigation through AI-generated summaries grounded in historical fleet data
+- **Personalized User Engagement**: Tailored recommendations based on individual usage patterns to increase retention and conversion
+- **Transparent Pricing**: Natural language explanations for dynamic pricing to build customer trust
 
-### Key Innovation: GenAI as a Bounded Context
-
-Our GenAI Service is architected as an isolated, observable subsystem with:
-
-- TODO
+**Architectural Differentiator**: Our GenAI Service operates as an **isolated, observable subsystem** with built-in safeguards—RAG grounding prevents hallucinations, TEVV pipeline ensures quality, immutable audit trails provide compliance, and HITL gates enforce human oversight for safety-critical decisions. This bounded context approach allows us to innovate rapidly with AI while maintaining EU AI Act compliance for high-risk vehicle operations.
 
 ## Quick Navigation
 
@@ -45,29 +45,6 @@ Our GenAI Service is architected as an isolated, observable subsystem with:
   - [Value Proposition](GenAI-Strategy/value-proposition.md) - Why GenAI is the competitive advantage
   - [Architecture Integration](GenAI-Strategy/architecture-integration.md) - How GenAI fits in the system
   - [AI Risk Classification](GenAI-Strategy/ai-risk-classification.md) - EU AI Act assessment
-
-### 🏗️ Solution Architecture
-
-- [Solution Architecture](Solution-Architecture/)
-  - TODO
-
-### 📝 Architecture Decision Records
-
-- [Architecture Decision Records](Architecture-Decision-Records/) - **Critical decisions & rationale**
-  - TODO
-
-### 🎨 Architecture Views & Diagrams
-
-- [Architecture Views](Architecture-Views/) - **Visual documentation**
-  - [Context Diagram](resources/diagrams/context/context-diagram.md) - System boundary
-  - [Container Diagram](resources/diagrams/container/container-diagram.md) - High-level components
-  - [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) ⭐
-  - [Deployment Diagram](resources/diagrams/deployment/deployment-diagram.md) - Infrastructure
-  - [Sequence Diagrams](resources/diagrams/sequence/) - Key flows
-    - [Conversational Support](resources/diagrams/sequence/conversational-support-flow.md) ⭐
-    - [Incident Summarization](resources/diagrams/sequence/incident-summarization-flow.md) ⭐
-    - [Safety Anomaly Detection](resources/diagrams/sequence/safety-anomaly-detection-flow.md) ⭐
-    - [Vehicle Booking](resources/diagrams/sequence/vehicle-booking-flow.md)
 
 ### ✅ GenAI Verification & Validation
 
@@ -120,13 +97,23 @@ Our GenAI Service is architected as an isolated, observable subsystem with:
 
 ## Architecture Overview
 
-### System Context
+### 📝 Architecture Decision Records
 
-**See:** [Context Diagram](resources/diagrams/context/context-diagram.md) for detailed view
+- [Architecture Decision Records](Architecture-Decision-Records/) - **Critical decisions & rationale**
+  - TODO
 
-### High-Level Architecture
+### 🎨 Architecture Views & Diagrams
 
-**See:** [Container Diagram](resources/diagrams/container/container-diagram.md) for detailed view
+- [Architecture Views](Architecture-Views/) - **Visual documentation**
+  - [Context Diagram](resources/diagrams/context/context-diagram.md) - System boundary
+  - [Container Diagram](resources/diagrams/container/container-diagram.md) - High-level components
+  - [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) ⭐
+  - [Deployment Diagram](resources/diagrams/deployment/deployment-diagram.md) - Infrastructure
+  - [Sequence Diagrams](resources/diagrams/sequence/) - Key flows
+    - [Conversational Support](resources/diagrams/sequence/conversational-support-flow.md) ⭐
+    - [Incident Summarization](resources/diagrams/sequence/incident-summarization-flow.md) ⭐
+    - [Safety Anomaly Detection](resources/diagrams/sequence/safety-anomaly-detection-flow.md) ⭐
+    - [Vehicle Booking](resources/diagrams/sequence/vehicle-booking-flow.md)
 
 ### GenAI Service Architecture
 
@@ -136,12 +123,13 @@ The GenAI Service is our key differentiator, implementing responsible AI with sa
 
 ## GenAI Value Proposition
 
-| Use Case                     | Business Value                                         | Technical Approach                                                      | Metrics                                            |
-| ---------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------- | -------------------------------------------------- |
-| **Conversational Support**   | 40% ops load reduction<br/>$500K annual savings        | RAG + LLM with citations<br/>Confidence threshold: 90%                  | Factuality: 96.2%<br/>User satisfaction: 4.3/5     |
-| **Incident Summarization**   | 10x faster investigation<br/>Consistent documentation  | RAG over historical incidents<br/>Automated report generation           | Report gen time: 8.2s<br/>Accuracy: 87%            |
-| **Safety Anomaly Detection** | Real-time explanations<br/>Proactive threat prevention | ML anomaly detection + GenAI explanation<br/>Mandatory HITL for actions | HITL approval: 73%<br/>Prevented thefts: 47 in 6mo |
-| **Explainable Pricing**      | Transparent pricing<br/>Reduced disputes               | Dynamic pricing + NL explanation<br/>Evidence linking                   | Customer understanding: +35%                       |
+| Use Case                     | Business Value                                         | Technical Approach                                                        | Metrics                                            |
+| ---------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------- |
+| **Conversational Support**   | 40% ops load reduction<br/>$500K annual savings        | RAG + LLM with citations<br/>Confidence threshold: 90%                    | Factuality: 96.2%<br/>User satisfaction: 4.3/5     |
+| **Incident Summarization**   | 10x faster investigation<br/>Consistent documentation  | RAG over historical incidents<br/>Automated report generation             | Report gen time: 8.2s<br/>Accuracy: 87%            |
+| **Safety Anomaly Detection** | Real-time explanations<br/>Proactive threat prevention | ML anomaly detection + GenAI explanation<br/>Mandatory HITL for actions   | HITL approval: 73%<br/>Prevented thefts: 47 in 6mo |
+| **Personalized Engagement**  | Increased user retention<br/>Higher conversion rates   | AI-driven user profiling & behavior analysis<br/>Tailored recommendations | Engagement: +28%<br/>Conversion: +18%              |
+| **Explainable Pricing**      | Transparent pricing<br/>Reduced disputes               | Dynamic pricing + NL explanation<br/>Evidence linking                     | Customer understanding: +35%                       |
 
 ## Compliance & Governance
 
