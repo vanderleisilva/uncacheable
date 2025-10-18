@@ -100,7 +100,9 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 ### 📝 Architecture Decision Records
 
 - [Architecture Decision Records](Architecture-Decision-Records/) - **Critical decisions & rationale**
-  - TODO
+  - [ADR Template](Architecture-Decision-Records/000-adr-template.md) - Standard format for new ADRs
+  - [ADR-001: Microservices Architecture](Architecture-Decision-Records/001-microservices-architecture.md)
+  - [ADR-002: Event-Driven Backbone](Architecture-Decision-Records/002-event-driven-backbone.md)
 
 ### 🎨 Architecture Views & Diagrams
 
