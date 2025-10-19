@@ -103,6 +103,7 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
   - [ADR Template](Architecture-Decision-Records/000-adr-template.md) - Standard format for new ADRs
   - [ADR-001: Microservices Architecture](Architecture-Decision-Records/001-microservices-architecture.md)
   - [ADR-002: Event-Driven Backbone](Architecture-Decision-Records/002-event-driven-backbone.md)
+  - [ADR-003: Core Services Architecture](Architecture-Decision-Records/003-core-services-container-diagram.md)
 
 ### 🎨 Architecture Views & Diagrams
 
