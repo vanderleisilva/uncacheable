@@ -2,7 +2,7 @@
 
 ## Description
 
-This diagram shows the high-level technical building blocks (containers) of the MobilityCorp platform. It illustrates the microservices architecture with the GenAI Service as a bounded context, event-driven communication, and data storage strategy.
+This diagram shows the high-level technical building blocks (containers) of the MobilityCorp platform. It illustrates the microservices architecture with the GenAI Platform as a bounded context, event-driven communication, and data storage strategy.
 
 **Note:** Services and databases are shown as grouped boxes for readability. Each box represents multiple independent components following microservices and database-per-service patterns.
 
@@ -27,9 +27,9 @@ This diagram shows the high-level technical building blocks (containers) of the 
 
 **See:** [Core Services Container Diagram](core-services/core-services-container-diagram.md) for detailed service architecture
 
-### GenAI Services (Bounded Context)
+### GenAI Platforms (Bounded Context)
 
-- **GenAI Service**: AI-powered features with RAG, TEVV, and HITL controls
+- **GenAI Platform**: AI-powered features with RAG, TEVV, and HITL controls
 
 ### Infrastructure
 
@@ -60,8 +60,8 @@ graph TB
         CoreServices["Microservices<br/>────────────<br/>• Booking Service<br/>• Fleet Service<br/>• Payment Service<br/>• User Service<br/>• Telemetry Service"]
     end
 
-    subgraph "GenAI Service"
-        GenAI["GenAI Service<br/>────────────<br/>• RAG Pipeline<br/>• TEVV Verifier<br/>• HITL Gateway<br/>• Audit Store"]
+    subgraph "GenAI Platform"
+        GenAI["GenAI Platform<br/>────────────<br/>• RAG Pipeline<br/>• TEVV Verifier<br/>• HITL Gateway<br/>• Audit Store"]
     end
 
     EventBus[Event Bus<br/>Apache Kafka]
@@ -109,7 +109,7 @@ graph TB
 ### Backend
 
 - **Node.js/TypeScript**: Fast, event-driven for core business services
-- **Python/FastAPI**: Optimal for GenAI service with ML library ecosystem
+- **Python/FastAPI**: Optimal for GenAI Platform with ML library ecosystem
 
 ### Data Storage
 
@@ -134,12 +134,12 @@ graph TB
 1. **Microservices**: Each service owns its domain and database
 2. **Event-Driven**: Services communicate via events for loose coupling
 3. **API Gateway**: Single entry point for authentication and routing
-4. **Bounded Context**: GenAI Service isolated with strict interfaces
+4. **Bounded Context**: GenAI Platform isolated with strict interfaces
 5. **Database per Service**: Each service has its own database for autonomy
 
 ## References
 
-- See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for detailed GenAI Service internals
+- See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for detailed GenAI Platform internals
 - See [Core Services Container Diagram](core-services/core-services-container-diagram.md) for detailed core services architecture
 - See [Deployment Diagram](../deployment/deployment-diagram.md) for infrastructure and hosting
 - See [ADR-001](../../../Architecture-Decision-Records/001-microservices-architecture.md) for architecture style rationale

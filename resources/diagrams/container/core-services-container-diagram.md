@@ -335,7 +335,7 @@ graph TB
 
 3. **Outbound**: Services query historical telemetry via REST API
    - Fleet Service: Analytics, maintenance predictions
-   - GenAI Service: Incident context, anomaly detection
+   - GenAI Platform: Incident context, anomaly detection
    - Analytics Service: Reporting and insights
 
 **Bidirectional Communication:**
@@ -356,7 +356,7 @@ graph TB
 **Consumed By:**
 
 - Fleet Service (vehicle analytics, maintenance predictions)
-- GenAI Service (incident context, anomaly detection)
+- GenAI Platform (incident context, anomaly detection)
 - Analytics Service (reporting and insights)
 
 ---
@@ -539,7 +539,7 @@ If a service misses events (due to downtime):
 
 ## References
 
-- See [Container Diagram](../container/container-diagram.md) for full system overview including GenAI Service
+- See [Container Diagram](../container/container-diagram.md) for full system overview including GenAI Platform
 - See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for AI subsystem details
 - See [Deployment Diagram](../deployment/deployment-diagram.md) for infrastructure
 - See [ADR-001: Microservices Architecture](../../../Architecture-Decision-Records/001-microservices-architecture.md)

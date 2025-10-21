@@ -150,14 +150,14 @@ We will decompose the core platform into **five business services** with Telemet
 **Consumed by Services:**
 
 - Fleet Service queries for analytics and maintenance predictions
-- GenAI Service queries for incident context
+- GenAI Platform queries for incident context
 - Analytics Service consumes for reporting
 
 **Analogy**: Like Prometheus (metrics infrastructure) or ELK stack (log infrastructure)
 
 **Alternative Considered**: Telemetry Service with anomaly detection logic
 
-- **Why Rejected**: Anomaly detection belongs in GenAI Service (domain logic), telemetry ingestion is infrastructure concern
+- **Why Rejected**: Anomaly detection belongs in GenAI Platform (domain logic), telemetry ingestion is infrastructure concern
 
 ### 3. Why Hybrid Technology Stack (Node.js + Go)?
 
@@ -319,7 +319,7 @@ User, Booking, and Payment services are:
 **Pros**: Could add anomaly detection logic, owned by development team
 **Cons**: Mixing infrastructure (data ingestion) with business logic (anomaly detection), operational complexity
 
-**Why Rejected**: Anomaly detection belongs in GenAI Service; telemetry ingestion is pure infrastructure concern
+**Why Rejected**: Anomaly detection belongs in GenAI Platform; telemetry ingestion is pure infrastructure concern
 
 ### Alternative 3: Node.js for All Services
 

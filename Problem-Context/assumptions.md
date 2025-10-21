@@ -142,7 +142,7 @@
 
 **ASSUME-TECH-009**: GPU availability
 
-- **Assumption**: Cloud GPU instances (e.g., AWS g5 instances) are readily available and cost-effective for GenAI service
+- **Assumption**: Cloud GPU instances (e.g., AWS g5 instances) are readily available and cost-effective for GenAI Platform
 - **Risk if wrong**: GPU shortages, cost overruns
 - **Validation**: Reserved instances, capacity planning, consider managed LLM APIs
 

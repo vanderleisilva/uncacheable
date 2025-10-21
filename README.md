@@ -49,7 +49,7 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 - **Personalized Engagement**: Tailored recommendations based on individual usage patterns to increase retention
 - **Transparent Pricing**: Natural language explanations for dynamic pricing to build customer trust
 
-**Architectural Differentiator**: Our GenAI Service operates as an **isolated, observable subsystem** with built-in safeguards—RAG grounding prevents hallucinations, TEVV pipeline ensures quality, immutable audit trails provide compliance, and HITL gates enforce human oversight for safety-critical decisions. This bounded context approach allows us to innovate rapidly with AI while maintaining EU AI Act compliance for high-risk vehicle operations.
+**Architectural Differentiator**: Our GenAI Platform operates as an **isolated, observable subsystem** with built-in safeguards—RAG grounding prevents hallucinations, TEVV pipeline ensures quality, immutable audit trails provide compliance, and HITL gates enforce human oversight for safety-critical decisions. This bounded context approach allows us to innovate rapidly with AI while maintaining EU AI Act compliance for high-risk vehicle operations.
 
 ## Quick Navigation
 
@@ -96,59 +96,48 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
     - AI-specific security (prompt injection, adversarial attacks)
     - Access controls & encryption
 
-### 💾 Data Architecture
+### 🎯 Quality Attributes & Targets
 
-- [Data Architecture](Data-Architecture/)
-  - [Data Model](Data-Architecture/data-model.md) - Core domain entities
-  - [RAG Index Strategy](Data-Architecture/rag-index-strategy.md) ⭐
-  - [Data Provenance](Data-Architecture/data-provenance.md) - Source tracking
-  - [CRUD Matrix](Data-Architecture/crud-matrix.md) - Service data ownership
-  - [RAG Data Flow Diagram](resources/diagrams/data-flow/rag-data-flow.md) ⭐
+**Key quality goals and how we achieve them:**
 
-### 🎯 Quality Attributes
+- **Scalability**: Independent service scaling, event-driven architecture, horizontal pod autoscaling
+- **Availability**: 99.9% uptime per service, multi-AZ deployment, circuit breakers, graceful degradation
+- **Security**: Zero-trust architecture, encryption at rest/transit, RBAC, prompt injection defense
+- **AI Safety**: TEVV pipeline, HITL gates for high-risk decisions, continuous monitoring ⭐
+- **Explainability**: Natural language explanations, source citations, confidence scores ⭐
+- **Cost Efficiency**: Managed services, auto-scaling, LLM provider abstraction
 
-- [Quality Attributes](Quality-Attributes/) - How we achieve quality goals
-  - [Scalability](Quality-Attributes/scalability.md)
-  - [Availability](Quality-Attributes/availability.md)
-  - [Security](Quality-Attributes/security.md)
-  - [AI Safety](Quality-Attributes/ai-safety.md) ⭐
-  - [Explainability](Quality-Attributes/explainability.md) ⭐
-  - [Cost Analysis](Quality-Attributes/cost-analysis.md)
-
-### ⚠️ Risks & Tradeoffs
-
-- [Risks & Tradeoffs](Risks-Tradeoffs/)
-  - [Technical Risks](Risks-Tradeoffs/technical-risks.md) - Hallucination, drift, latency
-  - [Architectural Tradeoffs](Risks-Tradeoffs/architectural-tradeoffs.md) - Pros & cons
-  - [AI-Specific Risks](Risks-Tradeoffs/ai-specific-risks.md) - Prompt injection, bias
-  - [Mitigation Strategies](Risks-Tradeoffs/mitigation-strategies.md)
+**See ADRs for detailed tradeoffs and rationale**
 
 ## Architecture Overview
 
 ### 📝 Architecture Decision Records
 
-- [Architecture Decision Records](Architecture-Decision-Records/) - **Critical decisions & rationale**
+- [Architecture Decision Records](Architecture-Decision-Records/) - **Critical decisions, rationale & tradeoffs**
   - [ADR Template](Architecture-Decision-Records/000-adr-template.md) - Standard format for new ADRs
   - [ADR-001: Microservices Architecture](Architecture-Decision-Records/001-microservices-architecture.md)
   - [ADR-002: Event-Driven Backbone](Architecture-Decision-Records/002-event-driven-backbone.md)
-  - [ADR-003: Core Services Architecture](Architecture-Decision-Records/003-core-services-container-diagram.md)
+  - [ADR-003: Core Services Architecture](Architecture-Decision-Records/003-core-services-decomposition.md)
+
+_Note: Each ADR includes detailed consequences, risks, and mitigation strategies_
 
 ### 🎨 Architecture Views & Diagrams
 
 - [Architecture Views](Architecture-Views/) - **Visual documentation**
   - [Context Diagram](resources/diagrams/context/context-diagram.md) - System boundary
   - [Container Diagram](resources/diagrams/container/container-diagram.md) - High-level components
+  - [Core Services Diagram](resources/diagrams/container/core-services-container-diagram.md) - Detailed service decomposition
   - [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) ⭐
   - [Deployment Diagram](resources/diagrams/deployment/deployment-diagram.md) - Infrastructure
-  - [Sequence Diagrams](resources/diagrams/sequence/) - Key flows
+  - [RAG Data Flow](resources/diagrams/data-flow/rag-data-flow.md) ⭐
+  - [TEVV Pipeline](resources/diagrams/tevv-pipeline/tevv-pipeline-flow.md) ⭐
+  - **Key AI Flows** (Sequence Diagrams):
     - [Conversational Support](resources/diagrams/sequence/conversational-support-flow.md) ⭐
-    - [Incident Summarization](resources/diagrams/sequence/incident-summarization-flow.md) ⭐
     - [Safety Anomaly Detection](resources/diagrams/sequence/safety-anomaly-detection-flow.md) ⭐
-    - [Vehicle Booking](resources/diagrams/sequence/vehicle-booking-flow.md)
 
-### GenAI Service Architecture
+### GenAI Platform Architecture
 
-The GenAI Service is our key differentiator, implementing responsible AI with safety controls:
+The GenAI Platform is our key differentiator, implementing responsible AI with safety controls:
 
 **See:** [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) for detailed view
 

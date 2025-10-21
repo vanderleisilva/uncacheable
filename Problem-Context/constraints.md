@@ -19,7 +19,7 @@
 
 **CONST-INFRA-003**: GPU infrastructure for GenAI
 
-- GenAI service requires GPU-enabled compute nodes
+- GenAI Platform requires GPU-enabled compute nodes
 - Cost constraint: GPU usage must be optimized
 - Consider managed LLM APIs vs. self-hosted models
 
@@ -90,7 +90,7 @@
 
 **CONST-REG-001**: High-risk AI system classification
 
-- MobilityCorp's GenAI service qualifies as "high-risk" (safety-critical vehicle operations)
+- MobilityCorp's GenAI Platform qualifies as "high-risk" (safety-critical vehicle operations)
 - Must implement all EU AI Act requirements:
   - ✅ Risk management system
   - ✅ Data governance and quality
@@ -232,7 +232,7 @@
 **CONST-OPS-001**: Uptime requirements
 
 - Core platform: 99.9% uptime (43 minutes downtime/month allowed)
-- GenAI service: 99.5% uptime (degraded mode acceptable)
+- GenAI Platform: 99.5% uptime (degraded mode acceptable)
 - Graceful degradation when GenAI unavailable
 
 **CONST-OPS-002**: Maintenance windows

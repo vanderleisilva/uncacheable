@@ -27,7 +27,7 @@ C4Context
     System_Ext(vehicles, "Fleet Vehicles", "Electric scooters, eBikes, cars & vans with IoT sensors and telemetry")
     System_Ext(payment, "Payment Gateway", "Processes payments and refunds (Stripe/similar)")
     System_Ext(maps, "Map Services", "Provides mapping, routing, and location services")
-    System_Ext(llm_provider, "AI/ML Platform", "External LLM provider for GenAI services")
+    System_Ext(llm_provider, "AI/ML Platform", "External LLM provider for GenAI Platforms")
 
     Rel(customer, mobility_system, "Books vehicles, views trips, requests support", "HTTPS/Mobile App")
     Rel(ops_team, mobility_system, "Manages fleet, reviews incidents, monitors operations", "HTTPS/Web Dashboard")

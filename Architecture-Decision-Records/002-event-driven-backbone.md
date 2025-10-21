@@ -16,7 +16,7 @@ MobilityCorp's microservices architecture (ADR-001) requires a robust communicat
 
 ### Key Challenges
 
-1. **Service Decoupling**: GenAI service shouldn't block core booking operations
+1. **Service Decoupling**: GenAI Platform shouldn't block core booking operations
 2. **Reliability**: Can't lose incident alerts or audit logs
 3. **Ordering**: Some workflows require ordered event processing (e.g., ride lifecycle)
 4. **Scalability**: Need to scale consumers independently of producers
@@ -169,7 +169,7 @@ Services subscribe to relevant event streams based on their domain responsibilit
 **Pros**: Simpler mental model, immediate consistency
 **Cons**: Tight coupling, cascading failures, can't handle telemetry volume, no audit trail
 
-**Why Rejected**: Cannot handle IoT telemetry volume, GenAI service failures would cascade to core services
+**Why Rejected**: Cannot handle IoT telemetry volume, GenAI Platform failures would cascade to core services
 
 ### 2. RabbitMQ (Message Queue)
 
@@ -217,14 +217,14 @@ Services subscribe to relevant event streams based on their domain responsibilit
 ### Phase 3: GenAI Events
 
 - Create topics: `genai.*`, `incident.detected`, `genai.hitl.*`
-- Implement GenAI Service as both producer and consumer
+- Implement GenAI Platform as both producer and consumer
 - Build Audit Service consumer for compliance logs
 
 ### Phase 4: User Engagement
 
 - Create topic: `user.engagement.event`
 - Implement producers in User Service and Booking Service
-- GenAI Service consumer for personalization pipeline
+- GenAI Platform consumer for personalization pipeline
 
 ### Phase 5: Production Hardening
 

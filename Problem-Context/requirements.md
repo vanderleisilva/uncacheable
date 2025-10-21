@@ -357,12 +357,12 @@
 **REQ-AVAIL-001**: System uptime
 
 - Core platform: 99.9% uptime (43 minutes downtime/month)
-- GenAI service: 99.5% uptime (degraded support acceptable)
+- GenAI Platform: 99.5% uptime (degraded support acceptable)
 - Payment processing: 99.95% uptime
 
 **REQ-AVAIL-002**: Graceful degradation
 
-- GenAI service failure → escalate to human support
+- GenAI Platform failure → escalate to human support
 - Payment gateway failure → queue for retry
 - Telemetry ingestion buffering during outages
 

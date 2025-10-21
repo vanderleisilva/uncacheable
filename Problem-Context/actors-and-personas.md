@@ -238,20 +238,20 @@ Technical team responsible for platform infrastructure and operations.
 **Pain Points:**
 
 - Complex microservices architecture to monitor
-- GenAI service requires specialized GPU infrastructure
+- GenAI Platform requires specialized GPU infrastructure
 - Compliance requirements add operational overhead
 - AI model updates risk introducing regressions
 
 **AI Interaction:**
 
-- Monitors GenAI service health metrics
+- Monitors GenAI Platform health metrics
 - Manages TEVV pipeline and model deployments
 - Investigates AI-related incidents
 - Reviews audit logs for compliance
 
 **Key Scenarios:**
 
-- "GenAI service latency spiked—investigate"
+- "GenAI Platform latency spiked—investigate"
 - "Deploy new LLM model to shadow mode for testing"
 - "Generate audit report for last 90 days of AI decisions"
 - "Why did the HITL approval rate jump from 8% to 15%?"
@@ -379,7 +379,7 @@ Executive and product leadership driving business strategy.
 | -------------------- | --------------------------------------------- | ---------------------------------------------------- |
 | **Customers**        | Mobile app, support, bookings                 | Conversational support, personalized recommendations |
 | **Operations Team**  | Dashboard, incident management, HITL approval | Incident summaries, anomaly explanations, HITL queue |
-| **DevOps Team**      | Infrastructure monitoring, deployments        | GenAI service health, TEVV pipeline, audit logs      |
+| **DevOps Team**      | Infrastructure monitoring, deployments        | GenAI Platform health, TEVV pipeline, audit logs     |
 | **Compliance Team**  | Audit reports, model documentation            | Model cards, audit trails, HITL tracking             |
 | **Business Team**    | Analytics dashboards, KPIs                    | AI ROI metrics, user satisfaction with AI            |
 | **External Systems** | API integrations, IoT telemetry               | LLM API calls, payment processing, map services      |
@@ -391,15 +391,15 @@ Executive and product leadership driving business strategy.
 **Scenario**: Commuter Clara's eBike won't unlock
 
 1. **Clara**: Opens app, taps "Help", types "My bike won't unlock"
-2. **GenAI Service**:
+2. **GenAI Platform**:
    - Retrieves relevant troubleshooting guides via RAG
    - Generates response with step-by-step instructions
    - Includes citations to help articles
    - Response time: 1.8 seconds
 3. **Clara**: Follows steps (restart app, check Bluetooth)
-4. **GenAI Service**: Asks "Did this solve your issue?"
+4. **GenAI Platform**: Asks "Did this solve your issue?"
 5. **Clara**: "Still not working"
-6. **GenAI Service**:
+6. **GenAI Platform**:
    - Escalates to human support (automatic ticket creation)
    - Notifies operations team
    - Provides context from conversation

@@ -12,9 +12,9 @@ MobilityCorp's vehicle-sharing platform needs to support multiple vehicle types 
 
 - **Independent Scalability**: Fleet telemetry processing (high volume) vs. booking operations (transaction-heavy) have different scaling profiles
 - **Team Autonomy**: Separate teams working on GenAI, payments, fleet management, and customer-facing features
-- **Technology Flexibility**: GenAI service requires GPU infrastructure and Python/ML stack, while core services use Node.js/Go
+- **Technology Flexibility**: GenAI Platform requires GPU infrastructure and Python/ML stack, while core services use Node.js/Go
 - **Fault Isolation**: AI service failures shouldn't impact critical booking and payment flows
-- **Compliance**: GenAI service requires strict audit trails and EU AI Act compliance controls
+- **Compliance**: GenAI Platform requires strict audit trails and EU AI Act compliance controls
 
 ### Constraints
 
@@ -58,9 +58,9 @@ We will adopt a **microservices architecture** with the following bounded contex
    - Time-series storage, anomaly detection triggers
    - Technology: Go, TimescaleDB
 
-### GenAI Service (Bounded Context)
+### GenAI Platform (Bounded Context)
 
-6. **GenAI Service** ⭐
+6. **GenAI Platform** ⭐
    - Conversational support, incident summarization
    - Safety anomaly explanations, personalized engagement
    - RAG pipeline, TEVV verification, HITL gateway, audit store
@@ -76,17 +76,17 @@ We will adopt a **microservices architecture** with the following bounded contex
 
 ### Positive
 
-✅ **Independent Deployment**: GenAI service can be updated multiple times per day without touching core booking logic
+✅ **Independent Deployment**: GenAI Platform can be updated multiple times per day without touching core booking logic
 
 ✅ **Technology Optimization**: Each service uses the best-fit technology (Python for AI, Go for high-throughput telemetry)
 
 ✅ **Scalability**: Telemetry service can scale to 10K messages/sec independently from booking service (50 requests/sec)
 
-✅ **Fault Isolation**: GenAI service failure degrades to manual operations team support, booking still works
+✅ **Fault Isolation**: GenAI Platform failure degrades to manual operations team support, booking still works
 
 ✅ **Team Autonomy**: 3 parallel teams (Core Platform, Fleet Ops, AI/ML) can work independently
 
-✅ **Compliance Boundaries**: Clear audit boundaries for GenAI service (EU AI Act requirement)
+✅ **Compliance Boundaries**: Clear audit boundaries for GenAI Platform (EU AI Act requirement)
 
 ✅ **Testing**: Smaller codebases enable faster testing cycles and easier unit test coverage
 
@@ -131,7 +131,7 @@ We will adopt a **microservices architecture** with the following bounded contex
 **Pros**: Extreme scalability, minimal ops, pay-per-use
 **Cons**: Cold start latency unacceptable for booking, GenAI requires long-running GPU instances, vendor lock-in
 
-**Why Rejected**: Not suitable for real-time requirements or stateful GenAI service
+**Why Rejected**: Not suitable for real-time requirements or stateful GenAI Platform
 
 ## Implementation Plan
 
@@ -149,7 +149,7 @@ We will adopt a **microservices architecture** with the following bounded contex
 
 ### Phase 3: GenAI Integration
 
-- GenAI Service with RAG pipeline
+- GenAI Platform with RAG pipeline
 - Event-driven integration via Kafka
 - Audit store implementation
 
