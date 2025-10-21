@@ -10,19 +10,43 @@ MobilityCorp operates a multi-modal vehicle-sharing platform supporting **electr
 
 Traditional vehicle-sharing platforms struggle with:
 
-- High operational costs for customer support and incident management
-- Slow response times for safety anomalies and fleet incidents
-- Difficulty maintaining service quality at scale
-- Complex compliance requirements for AI in safety-critical systems
+- **Fleet Distribution**: Right vehicles aren't in the right places at the right times
+- **Demand Anticipation**: Unable to predict and proactively position fleet for customer needs
+- **Battery Management**: Vehicles running out of charge, inefficient battery swap prioritization, no charge-sufficiency checks before bookings
+- **Customer Reliability**: Ad-hoc usage patterns prevent building trust for regular commutes
+- **Operational Costs**: High costs for customer support and incident management
+- **Slow Response**: Delayed response times for safety anomalies and fleet incidents
+- **AI Uncertainty**: Dealing with rapid AI model changes, price fluctuations, and provider reliability risks
+- **AI Validation**: Ensuring AI functionality works correctly and detecting when AI starts misbehaving in production
+- **AI Compliance**: Complex regulatory requirements for AI in safety-critical systems
 
 ### Our Solution: GenAI as a Safety-First Bounded Context
 
 MobilityCorp delivers an **AI-augmented operations platform** that reduces costs while maintaining safety through:
 
-- **Intelligent Customer Support**: AI-powered conversational assistant handles 40% of support queries with RAG-grounded responses and full citation traceability
-- **Proactive Safety Management**: Real-time anomaly detection with natural language explanations, requiring human approval for high-risk actions (HITL)
-- **Automated Incident Intelligence**: 10x faster incident investigation through AI-generated summaries grounded in historical fleet data
-- **Personalized User Engagement**: Tailored recommendations based on individual usage patterns to increase retention and conversion
+**Fleet Intelligence:**
+
+- **Demand Forecasting**: ML-powered prediction of demand by location, time, and events to position vehicles proactively
+- **Rebalancing Optimization**: AI-driven route planning for fleet crews to maximize vehicle availability
+- **Battery Intelligence**: Predictive charge modeling to prevent charge-outs, optimize battery swap priorities, and block bookings with insufficient charge
+- **Pre-Positioning**: Anticipatory vehicle placement for regular commuters to build service reliability
+
+**Operations & Safety:**
+
+- **Intelligent Customer Support**: AI-powered conversational assistant handles 40% of support queries with RAG-grounded responses
+- **Proactive Safety Management**: Real-time anomaly detection with natural language explanations and HITL gates
+- **Automated Incident Intelligence**: 10x faster incident investigation through AI-generated summaries
+
+**AI Quality & Governance:**
+
+- **TEVV Pipeline**: Continuous Test, Evaluate, Validate, Verify process to detect AI misbehavior and ensure quality
+- **Model Monitoring**: Real-time drift detection, hallucination tracking, and performance degradation alerts
+- **Provider Resilience**: Abstraction layer for LLM providers, shadow mode testing, and graceful degradation strategies
+- **Compliance by Design**: EU AI Act compliance with immutable audit trails, model registry, and human oversight
+
+**Customer Experience:**
+
+- **Personalized Engagement**: Tailored recommendations based on individual usage patterns to increase retention
 - **Transparent Pricing**: Natural language explanations for dynamic pricing to build customer trust
 
 **Architectural Differentiator**: Our GenAI Service operates as an **isolated, observable subsystem** with built-in safeguards—RAG grounding prevents hallucinations, TEVV pipeline ensures quality, immutable audit trails provide compliance, and HITL gates enforce human oversight for safety-critical decisions. This bounded context approach allows us to innovate rapidly with AI while maintaining EU AI Act compliance for high-risk vehicle operations.
@@ -126,13 +150,29 @@ The GenAI Service is our key differentiator, implementing responsible AI with sa
 
 ## GenAI Value Proposition
 
-| Use Case                     | Business Value                                         | Technical Approach                                                        | Metrics                                            |
-| ---------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------- |
-| **Conversational Support**   | 40% ops load reduction<br/>$500K annual savings        | RAG + LLM with citations<br/>Confidence threshold: 90%                    | Factuality: 96.2%<br/>User satisfaction: 4.3/5     |
-| **Incident Summarization**   | 10x faster investigation<br/>Consistent documentation  | RAG over historical incidents<br/>Automated report generation             | Report gen time: 8.2s<br/>Accuracy: 87%            |
-| **Safety Anomaly Detection** | Real-time explanations<br/>Proactive threat prevention | ML anomaly detection + GenAI explanation<br/>Mandatory HITL for actions   | HITL approval: 73%<br/>Prevented thefts: 47 in 6mo |
-| **Personalized Engagement**  | Increased user retention<br/>Higher conversion rates   | AI-driven user profiling & behavior analysis<br/>Tailored recommendations | Engagement: +28%<br/>Conversion: +18%              |
-| **Explainable Pricing**      | Transparent pricing<br/>Reduced disputes               | Dynamic pricing + NL explanation<br/>Evidence linking                     | Customer understanding: +35%                       |
+### Operations & Support
+
+| Use Case                     | Business Value                                         | Technical Approach                                                      | Metrics                                            |
+| ---------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------- | -------------------------------------------------- |
+| **Conversational Support**   | 40% ops load reduction<br/>Significant annual savings  | RAG + LLM with citations<br/>Confidence threshold: 90%                  | Factuality: 96.2%<br/>User satisfaction: 4.3/5     |
+| **Incident Summarization**   | 10x faster investigation<br/>Consistent documentation  | RAG over historical incidents<br/>Automated report generation           | Report gen time: 8.2s<br/>Accuracy: 87%            |
+| **Safety Anomaly Detection** | Real-time explanations<br/>Proactive threat prevention | ML anomaly detection + GenAI explanation<br/>Mandatory HITL for actions | HITL approval: 73%<br/>Prevented thefts: 47 in 6mo |
+
+### Fleet Intelligence ⭐ NEW
+
+| Use Case                            | Business Value                                          | Technical Approach                                                | Metrics                                              |
+| ----------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- |
+| **Demand Forecasting**              | Proactive positioning<br/>15% reduction in "no vehicle" | Time-series ML + historical data<br/>Weather & events integration | Forecast accuracy: 82%<br/>Availability: +15%        |
+| **Fleet Rebalancing Optimization**  | Efficient crew routing<br/>30% faster rebalancing       | AI-driven route optimization<br/>Real-time demand integration     | Crew efficiency: +30%<br/>Rebalancing time: -25%     |
+| **Battery Management Intelligence** | Prevent charge-outs<br/>Reduce swap crew overhead       | Predictive charge modeling<br/>Usage pattern analysis             | Charge-out incidents: -85%<br/>Swap efficiency: +40% |
+| **Predictive Pre-Positioning**      | Commuter reliability<br/>Increase repeat usage          | User behavior ML<br/>Route-based anticipation                     | Commuter satisfaction: 4.7/5<br/>Repeat usage: +45%  |
+
+### Customer Experience
+
+| Use Case                    | Business Value                                       | Technical Approach                                                        | Metrics                               |
+| --------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------- |
+| **Personalized Engagement** | Increased user retention<br/>Higher conversion rates | AI-driven user profiling & behavior analysis<br/>Tailored recommendations | Engagement: +28%<br/>Conversion: +18% |
+| **Explainable Pricing**     | Transparent pricing<br/>Reduced disputes             | Dynamic pricing + NL explanation<br/>Evidence linking                     | Customer understanding: +35%          |
 
 ## Compliance & Governance
 
@@ -172,9 +212,9 @@ The GenAI Service is our key differentiator, implementing responsible AI with sa
 
 ## Team
 
-**Max Hopei**  
-**Vanderlei Alves da Silva**  
-**Yaroslav Poliakov**
+- [Max Hopei](https://github.com/maxhopei)
+- [Vanderlei Alves da Silva](https://github.com/vanderleisilva)
+- [Yaroslav Poliakov](https://github.com/altersign)
 
 ---
 
