@@ -19,11 +19,13 @@ This diagram shows the high-level technical building blocks (containers) of the 
 
 ### Core Services (Microservices)
 
-- **Booking Service**: Handles reservations and trip lifecycle
-- **Fleet Service**: Manages vehicle inventory, availability, and rebalancing
-- **Payment Service**: Coordinates payment processing
-- **User Service**: User profiles, authentication, and preferences
-- **Telemetry Service**: Ingests and processes vehicle sensor data
+- **User Service**: Authentication, profiles, and ride history (Node.js)
+- **Booking Service**: Reservations, trip lifecycle, and pricing (Node.js)
+- **Availability Service**: Vehicle search and real-time availability (Go)
+- **Fleet Service**: Vehicle inventory, locations, and maintenance (Go)
+- **Payment Service**: Payment processing and billing (Node.js)
+
+**See:** [Core Services Container Diagram](core-services/core-services-container-diagram.md) for detailed service architecture
 
 ### GenAI Services (Bounded Context)
 
@@ -31,10 +33,11 @@ This diagram shows the high-level technical building blocks (containers) of the 
 
 ### Infrastructure
 
-- **Event Bus**: Event-driven communication backbone (Kafka)
+- **Event Bus**: Event streaming for async, decoupled communication
 - **Databases**: Per-service databases (PostgreSQL, MongoDB)
 - **Cache**: Redis for session and frequently accessed data
 - **Monitoring**: Observability stack (Prometheus, Grafana)
+- **Telemetry Pipeline**: MQTT broker + TimescaleDB for IoT data ingestion (infrastructure, not a service)
 
 ## Diagram
 
@@ -137,6 +140,8 @@ graph TB
 ## References
 
 - See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for detailed GenAI Service internals
+- See [Core Services Container Diagram](core-services/core-services-container-diagram.md) for detailed core services architecture
 - See [Deployment Diagram](../deployment/deployment-diagram.md) for infrastructure and hosting
 - See [ADR-001](../../../Architecture-Decision-Records/001-microservices-architecture.md) for architecture style rationale
-- See [ADR-003](../../../Architecture-Decision-Records/003-genai-as-bounded-context.md) for GenAI isolation strategy
+- See [ADR-002](../../../Architecture-Decision-Records/002-event-driven-backbone.md) for event-driven architecture rationale
+- See [ADR-003](../../../Architecture-Decision-Records/003-core-services-decomposition.md) for core services decomposition rationale
