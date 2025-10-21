@@ -167,6 +167,12 @@ The GenAI Platform is our key differentiator, implementing responsible AI with s
 | **Personalized Engagement** | Increased user retention<br/>Higher conversion rates | AI-driven user profiling & behavior analysis<br/>Tailored recommendations | Engagement: +28%<br/>Conversion: +18% |
 | **Explainable Pricing**     | Transparent pricing<br/>Reduced disputes             | Dynamic pricing + NL explanation<br/>Evidence linking                     | Customer understanding: +35%          |
 
+### Use Case Sequence Diagrams
+
+Following we have a list of the main sequence diagram use-cases:
+
+- [Safety Anomaly Detection](./resources/diagrams/sequence/safety-anomaly-detection-flow.md)
+
 ## Compliance & Governance
 
 ### EU AI Act Classification
