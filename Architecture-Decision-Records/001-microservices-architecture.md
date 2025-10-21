@@ -53,7 +53,7 @@ We will adopt a **microservices architecture** with the following bounded contex
    - Integration with external payment gateway
    - Technology: Node.js, PostgreSQL (PCI compliance)
 
-5. **Telemetry Service**
+5. **Telemetry Pipeline**
    - Real-time IoT data ingestion via MQTT
    - Time-series storage, anomaly detection triggers
    - Technology: Go, TimescaleDB
@@ -80,7 +80,7 @@ We will adopt a **microservices architecture** with the following bounded contex
 
 ✅ **Technology Optimization**: Each service uses the best-fit technology (Python for AI, Go for high-throughput telemetry)
 
-✅ **Scalability**: Telemetry service can scale to 10K messages/sec independently from booking service (50 requests/sec)
+✅ **Scalability**: Telemetry Pipeline can scale to 10K messages/sec independently from booking service (50 requests/sec)
 
 ✅ **Fault Isolation**: GenAI Platform failure degrades to manual operations team support, booking still works
 
@@ -143,7 +143,7 @@ We will adopt a **microservices architecture** with the following bounded contex
 
 ### Phase 2: Fleet Operations
 
-- Fleet Service + Telemetry Service
+- Fleet Service + Telemetry Pipeline
 - MQTT broker setup
 - TimescaleDB for time-series data
 

@@ -57,7 +57,7 @@ graph TB
     APIGateway[API Gateway<br/>Authentication & Routing]
 
     subgraph "Core Services"
-        CoreServices["Microservices<br/>────────────<br/>• Booking Service<br/>• Fleet Service<br/>• Payment Service<br/>• User Service<br/>• Telemetry Service"]
+        CoreServices["Microservices<br/>────────────<br/>• Booking Service<br/>• Fleet Service<br/>• Payment Service<br/>• User Service<br/>• Telemetry Pipeline"]
     end
 
     subgraph "GenAI Platform"

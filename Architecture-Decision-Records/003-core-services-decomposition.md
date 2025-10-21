@@ -155,7 +155,7 @@ We will decompose the core platform into **five business services** with Telemet
 
 **Analogy**: Like Prometheus (metrics infrastructure) or ELK stack (log infrastructure)
 
-**Alternative Considered**: Telemetry Service with anomaly detection logic
+**Alternative Considered**: Telemetry Pipeline with anomaly detection logic
 
 - **Why Rejected**: Anomaly detection belongs in GenAI Platform (domain logic), telemetry ingestion is infrastructure concern
 
