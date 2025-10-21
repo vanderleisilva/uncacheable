@@ -83,14 +83,18 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 ### ⚖️ AI Governance & Compliance
 
 - [AI Governance & Compliance](AI-Governance-Compliance/) - **EU AI Act compliance**
-  - [EU AI Act Compliance](AI-Governance-Compliance/eu-ai-act-compliance.md) ⭐
-  - [Model Registry Strategy](AI-Governance-Compliance/model-registry-strategy.md)
-  - [Audit Trail Design](AI-Governance-Compliance/audit-trail-design.md)
-  - [Model Cards](AI-Governance-Compliance/model-cards/)
-    - [Conversational Support Model](AI-Governance-Compliance/model-cards/conversational-support-model.md)
-    - [Incident Classifier Model](AI-Governance-Compliance/model-cards/incident-classifier-model.md)
-    - [Safety Anomaly Detector](AI-Governance-Compliance/model-cards/safety-anomaly-detector.md)
-  - [Privacy & Security](AI-Governance-Compliance/privacy-security.md)
+  - [Compliance & Governance Framework](AI-Governance-Compliance/compliance-framework.md) ⭐
+    - EU AI Act compliance (risk classification, required controls)
+    - Model registry & audit trail design
+    - Governance processes & responsibilities
+  - [AI Model Documentation](AI-Governance-Compliance/model-cards/) ⭐
+    - Model cards for all AI models (Conversational Support, Incident Classifier, Safety Detector)
+    - Training data provenance & performance metrics
+    - Model limitations & bias testing
+  - [Security & Privacy](AI-Governance-Compliance/security-privacy.md)
+    - GDPR compliance & data protection
+    - AI-specific security (prompt injection, adversarial attacks)
+    - Access controls & encryption
 
 ### 💾 Data Architecture
 
