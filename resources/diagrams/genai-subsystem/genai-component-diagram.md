@@ -1,8 +1,8 @@
-# GenAI Component Diagram - GenAI Service Internals
+# GenAI Component Diagram - GenAI Platform Internals
 
 ## Description
 
-This diagram shows the detailed internal components of the GenAI Service, which provides AI-powered features while ensuring safety, explainability, and compliance. The service implements RAG (Retrieval-Augmented Generation), TEVV (Test, Evaluate, Validate, Verify), and Human-in-the-Loop controls.
+This diagram shows the detailed internal components of the GenAI Platform, which provides AI-powered features while ensuring safety, explainability, and compliance. The service implements RAG (Retrieval-Augmented Generation), TEVV (Test, Evaluate, Validate, Verify), and Human-in-the-Loop controls.
 
 ## Key Components
 
@@ -40,7 +40,7 @@ This diagram shows the detailed internal components of the GenAI Service, which 
 
 ```mermaid
 graph TB
-    subgraph "GenAI Service"
+    subgraph "GenAI Platform"
         subgraph "API Layer"
             API[API Controller]
             Validator[Request Validator]
@@ -223,7 +223,7 @@ graph TB
 
 ## References
 
-- See [Container Diagram](../container/container-diagram.md) for how GenAI Service fits in overall system
+- See [Container Diagram](../container/container-diagram.md) for how GenAI Platform fits in overall system
 - See [RAG Data Flow](../data-flow/rag-data-flow.md) for detailed RAG pipeline
 - See [ADR-004](../../../Architecture-Decision-Records/004-rag-pattern-for-grounding.md) for RAG strategy
 - See [ADR-005](../../../Architecture-Decision-Records/005-tevv-pipeline-approach.md) for TEVV approach

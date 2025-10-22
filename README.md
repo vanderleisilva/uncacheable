@@ -118,6 +118,7 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
   - [ADR-001: Microservices Architecture](Architecture-Decision-Records/001-microservices-architecture.md)
   - [ADR-002: Event-Driven Backbone](Architecture-Decision-Records/002-event-driven-backbone.md)
   - [ADR-003: Core Services Architecture](Architecture-Decision-Records/003-core-services-decomposition.md)
+  - [ADR-004: RAG Strategy](Architecture-Decision-Records/004-rag-strategy.md) ⭐
 
 _Note: Each ADR includes detailed consequences, risks, and mitigation strategies_
 
@@ -128,7 +129,6 @@ _Note: Each ADR includes detailed consequences, risks, and mitigation strategies
   - [Container Diagram](resources/diagrams/container/container-diagram.md) - High-level components
   - [Core Services Diagram](resources/diagrams/container/core-services-container-diagram.md) - Detailed service decomposition
   - [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) ⭐
-  - [Deployment Diagram](resources/diagrams/deployment/deployment-diagram.md) - Infrastructure
   - [RAG Data Flow](resources/diagrams/data-flow/rag-data-flow.md) ⭐
   - [TEVV Pipeline](resources/diagrams/tevv-pipeline/tevv-pipeline-flow.md) ⭐
   - **Key AI Flows** (Sequence Diagrams):
@@ -166,12 +166,6 @@ The GenAI Platform is our key differentiator, implementing responsible AI with s
 | --------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------- |
 | **Personalized Engagement** | Increased user retention<br/>Higher conversion rates | AI-driven user profiling & behavior analysis<br/>Tailored recommendations | Engagement: +28%<br/>Conversion: +18% |
 | **Explainable Pricing**     | Transparent pricing<br/>Reduced disputes             | Dynamic pricing + NL explanation<br/>Evidence linking                     | Customer understanding: +35%          |
-
-### Use Case Sequence Diagrams
-
-Following we have a list of the main sequence diagram use-cases:
-
-- [Safety Anomaly Detection](./resources/diagrams/sequence/safety-anomaly-detection-flow.md)
 
 ## Compliance & Governance
 
