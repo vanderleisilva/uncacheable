@@ -1,4 +1,4 @@
-# ADR-004: RAG (Retrieval-Augmented Generation) Strategy for Grounding AI Responses
+# ADR-005: RAG (Retrieval-Augmented Generation) Strategy for Grounding AI Responses
 
 ## Status
 
@@ -428,10 +428,7 @@ Answer:`;
 - Experiment with reranking models to improve top-K results
 
 ### Dependencies
-
-- **ADR-001: Microservices Architecture** - RAG Retriever as independent service
-- **ADR-002: Event-Driven Backbone** - Document update events trigger re-indexing
-- **ADR-003: Core Services Architecture** - RAG integrates with GenAI Platform
+- 
 - [Compliance Framework](../AI-Governance-Compliance/compliance-framework.md) - Provenance for audit trails
 
 ### Success Metrics
@@ -449,8 +446,8 @@ Answer:`;
 
 ### ADRs
 
-- [ADR-002: Event-Driven Backbone](002-event-driven-backbone.md) - Document updates via events
-- [ADR-003: Core Services Architecture](003-core-services-decomposition.md) - GenAI Platform integration
+- [ADR-002: Event-Driven Backbone](003-event-driven-backbone) - Document updates via events
+- [ADR-003: Core Services Architecture](004-core-services-decomposition) - GenAI Platform integration
 - ADR-005: Hallucination Detection (uses RAG sources for verification)
 
 ### Architecture Views

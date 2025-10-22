@@ -1,4 +1,3 @@
-# ADR-002: Event-Driven Backbone with Apache Kafka
 
 ## Status
 
@@ -6,7 +5,7 @@
 
 ## Context
 
-MobilityCorp's microservices architecture (ADR-001) requires a robust communication pattern between services. The system handles multiple asynchronous workflows:
+MobilityCorp's microservices architecture (ADR-002) requires a robust communication pattern between services. The system handles multiple asynchronous workflows:
 
 - **Business Operations**: Booking lifecycle, vehicle status changes, payment processing
 - **Incident Detection**: Safety anomalies trigger GenAI explanations and potential HITL workflows
@@ -246,10 +245,7 @@ Services subscribe to relevant event streams based on their domain responsibilit
 
 ### ADRs
 
-- [ADR-001: Microservices Architecture](001-microservices-architecture.md) - Foundation for event-driven communication
-- [ADR-003: GenAI as Bounded Context](003-genai-as-bounded-context.md) - GenAI event integration
-- [ADR-005: TEVV Pipeline Approach](005-tevv-pipeline-approach.md) - Testing events
-- ADR-TBD: IoT Telemetry Architecture - High-volume telemetry processing strategy
+- [ADR-002: Microservices Architecture](002-microservices-architecture) - Foundation for event-driven communication
 
 ### External References
 

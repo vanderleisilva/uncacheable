@@ -540,6 +540,6 @@ If a service misses events (due to downtime):
 - See [Container Diagram](../container/container-diagram.md) for full system overview including GenAI Platform
 - See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for AI subsystem details
 - See [Deployment Diagram](../deployment/deployment-diagram.md) for infrastructure
-- See [ADR-001: Microservices Architecture](../../../Architecture-Decision-Records/001-microservices-architecture.md)
-- See [ADR-002: Event-Driven Backbone](../../../Architecture-Decision-Records/002-event-driven-backbone.md)
-- See [ADR-003: Core Services Decomposition](../../../Architecture-Decision-Records/003-core-services-decomposition.md) - **Justification for this diagram's decisions**
+- See [ADR-002: Microservices Architecture](../../../Architecture-Decision-Records/002-microservices-architecture)
+- See [ADR-003: Event-Driven Backbone](../../../Architecture-Decision-Records/003-event-driven-backbone)
+- See [ADR-004: Core Services Decomposition](../../../Architecture-Decision-Records/004-core-services-decomposition) - **Justification for this diagram's decisions**

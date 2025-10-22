@@ -226,6 +226,6 @@ graph TB
 
 - See [Container Diagram](../container/container-diagram.md) for how GenAI Platform fits in overall system
 - See [RAG Data Flow](../data-flow/rag-data-flow.md) for detailed RAG pipeline
-- See [ADR-004](../../../Architecture-Decision-Records/004-rag-strategy.md) for RAG strategy
+- See [ADR-005](../../../Architecture-Decision-Records/005-rag-strategy) for RAG strategy
 - See [ADR-006](../../../Architecture-Decision-Records/006-hitl-strategy.md) for HITL approach
 - See [ADR-006](../../../Architecture-Decision-Records/006-human-in-loop-gates.md) for HITL strategy

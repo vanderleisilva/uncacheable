@@ -1,4 +1,4 @@
-# ADR-003: Core Services Decomposition
+# ADR-004: Core Services Decomposition
 
 ## Status
 
@@ -6,7 +6,7 @@
 
 ## Context
 
-Following the adoption of microservices architecture (ADR-001) and event-driven communication (ADR-002), we need to define the specific bounded contexts for MobilityCorp's core business services. The decomposition must balance service autonomy, performance requirements, team capacity, and operational complexity.
+Following the adoption of microservices architecture (ADR-002) and event-driven communication (ADR-002), we need to define the specific bounded contexts for MobilityCorp's core business services. The decomposition must balance service autonomy, performance requirements, team capacity, and operational complexity.
 
 ### Key Requirements
 
@@ -370,10 +370,8 @@ User, Booking, and Payment services are:
 
 ### ADRs
 
-- [ADR-001: Microservices Architecture](001-microservices-architecture.md) - Foundation for service decomposition
-- [ADR-002: Event-Driven Backbone](002-event-driven-backbone.md) - Service communication pattern
-- ADR-004: API Gateway Pattern - External request routing
-- ADR-009: Database per Service - Data ownership strategy
+- [ADR-002: Microservices Architecture](002-microservices-architecture) - Foundation for service decomposition
+- [ADR-003: Event-Driven Backbone](003-event-driven-backbone) - Service communication pattern
 
 ### External References
 

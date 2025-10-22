@@ -52,4 +52,4 @@ C4Context
 ## References
 
 - See [Container Diagram](../container/container-diagram.md) for internal system structure
-- See [ADR-001](../../../Architecture-Decision-Records/001-microservices-architecture.md) for architecture style decision
+- See [ADR-002](../../../Architecture-Decision-Records/002-microservices-architecture) for architecture style decision

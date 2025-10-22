@@ -106,10 +106,11 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 
 - [Architecture Decision Records](Architecture-Decision-Records/) - **Critical decisions, rationale & tradeoffs**
   - [ADR Template](Architecture-Decision-Records/000-adr-template.md) - Standard format for new ADRs
-  - [ADR-001: Microservices Architecture](Architecture-Decision-Records/001-microservices-architecture.md)
-  - [ADR-002: Event-Driven Backbone](Architecture-Decision-Records/002-event-driven-backbone.md)
-  - [ADR-003: Core Services Architecture](Architecture-Decision-Records/003-core-services-decomposition.md)
-  - [ADR-004: RAG Strategy](Architecture-Decision-Records/004-rag-strategy.md) ⭐
+  - [ADR-001: Combine Microservices, Streaming, and Agentic Architectures for the holistic solution](Architecture-Decision-Records/001-high-level-architecture.md)
+  - [ADR-002: Microservices Architecture](Architecture-Decision-Records/002-microservices-architecture)
+  - [ADR-003: Event-Driven Backbone](Architecture-Decision-Records/003-event-driven-backbone)
+  - [ADR-004: Core Services Architecture](Architecture-Decision-Records/004-core-services-decomposition)
+  - [ADR-005: RAG Strategy](Architecture-Decision-Records/005-rag-strategy) ⭐
 
 _Note: Each ADR includes detailed consequences, risks, and mitigation strategies_
 
