@@ -20,13 +20,11 @@ Each service is independently deployable, owns its data, and communicates via ev
 
 ```mermaid
 graph TB
-    subgraph "External"
-        MobileApp[Mobile App<br/>React Native]
-        Dashboard[Ops Dashboard<br/>React]
-        Vehicles[IoT Vehicles<br/>Fleet Devices<br/>MQTT Clients]
-        PaymentGW[Payment Gateway<br/>Stripe]
-        Maps[Map Services<br/>Google Maps]
-    end
+    MobileApp[Mobile App<br/>React Native]
+    Dashboard[Ops Dashboard<br/>React]
+    Vehicles[IoT Vehicles<br/>Fleet Devices<br/>MQTT Clients]
+    PaymentGW[Payment Gateway<br/>Stripe]
+    Maps[Map Services<br/>Google Maps]
 
     TelemetryPipeline[Telemetry Pipeline<br/>────────────<br/>MQTT Broker<br/>TimescaleDB<br/>IoT Data Ingestion]
 

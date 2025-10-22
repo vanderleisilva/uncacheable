@@ -2,7 +2,7 @@
 
 ## Description
 
-This diagram shows the detailed internal components of the GenAI Platform, which provides AI-powered features while ensuring safety, explainability, and compliance. The service implements RAG (Retrieval-Augmented Generation), TEVV (Test, Evaluate, Validate, Verify), and Human-in-the-Loop controls.
+This diagram shows the detailed internal components of the GenAI Platform, which provides AI-powered features while ensuring safety, explainability, and compliance. The service implements RAG (Retrieval-Augmented Generation), runtime validation, and Human-in-the-Loop controls.
 
 ## Key Components
 
@@ -23,7 +23,7 @@ This diagram shows the detailed internal components of the GenAI Platform, which
 
 - **Hallucination Detector**: Validates LLM claims against retrieved sources
 - **Confidence Calibrator**: Produces calibrated uncertainty scores
-- **Verifier (TEVV)**: Runs automated acceptance tests on outputs
+- **Response Validator**: Enforces quality thresholds and acceptance criteria
 
 ### Human Oversight
 
@@ -62,7 +62,7 @@ graph TB
         subgraph "Quality Assurance"
             HallucinationDetector[Hallucination Detector]
             Calibrator[Confidence Calibrator]
-            TEVVVerifier[TEVV Verifier]
+            ResponseValidator[Response Validator]
         end
 
         subgraph "Human Oversight"
@@ -102,10 +102,10 @@ graph TB
 
     Orchestrator -->|Combined output| HallucinationDetector
     HallucinationDetector -->|Validated output| Calibrator
-    Calibrator -->|Confidence score| TEVVVerifier
+    Calibrator -->|Confidence score| ResponseValidator
 
-    TEVVVerifier -->|High risk?| HITL
-    TEVVVerifier -->|Low risk| ProvenanceTracker
+    ResponseValidator -->|High risk?| HITL
+    ResponseValidator -->|Low risk| ProvenanceTracker
 
     HITL --> ApprovalQueue
     ApprovalQueue -->|Review request| OpsTeam
@@ -124,7 +124,7 @@ graph TB
     style HallucinationDetector fill:#F39C12
     style HITL fill:#E74C3C
     style AuditStore fill:#9B59B6
-    style TEVVVerifier fill:#F39C12
+    style ResponseValidator fill:#F39C12
 ```
 
 ## Component Responsibilities
@@ -156,10 +156,11 @@ graph TB
 
 - **Hallucination Detector**: Cross-checks LLM claims against retrieved sources, flags unsupported statements
 - **Confidence Calibrator**: Converts raw model probabilities to calibrated confidence scores using temperature scaling
-- **TEVV Verifier**: Runs automated tests on outputs:
+- **Response Validator**: Enforces runtime quality checks on outputs:
   - Factuality checks (≥95% claims must be supported)
   - Format validation
   - Safety constraints
+  - Confidence threshold enforcement
 
 ### Human Oversight
 
@@ -201,7 +202,7 @@ graph TB
 8. **LLM** generates response with explanation
 9. **Hallucination Detector** verifies all claims are backed by retrieved docs
 10. **Confidence Calibrator** scores confidence at 97%
-11. **TEVV Verifier** checks factuality threshold (>95% ✓)
+11. **Response Validator** checks factuality threshold (>95% ✓)
 12. **Provenance Tracker** attaches citations to response
 13. **Audit Store** logs entire interaction
 14. Response returned to customer with citations
@@ -225,6 +226,6 @@ graph TB
 
 - See [Container Diagram](../container/container-diagram.md) for how GenAI Platform fits in overall system
 - See [RAG Data Flow](../data-flow/rag-data-flow.md) for detailed RAG pipeline
-- See [ADR-004](../../../Architecture-Decision-Records/004-rag-pattern-for-grounding.md) for RAG strategy
-- See [ADR-005](../../../Architecture-Decision-Records/005-tevv-pipeline-approach.md) for TEVV approach
+- See [ADR-004](../../../Architecture-Decision-Records/004-rag-strategy.md) for RAG strategy
+- See [ADR-006](../../../Architecture-Decision-Records/006-hitl-strategy.md) for HITL approach
 - See [ADR-006](../../../Architecture-Decision-Records/006-human-in-loop-gates.md) for HITL strategy

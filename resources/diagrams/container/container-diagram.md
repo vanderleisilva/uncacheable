@@ -29,7 +29,7 @@ This diagram shows the high-level technical building blocks (containers) of the 
 
 ### GenAI Platforms (Bounded Context)
 
-- **GenAI Platform**: AI-powered features with RAG, TEVV, and HITL controls
+- **GenAI Platform**: AI-powered features with RAG, runtime validation, and HITL controls
 
 ### Infrastructure
 
@@ -61,7 +61,7 @@ graph TB
     end
 
     subgraph "GenAI Platform"
-        GenAI["GenAI Platform<br/>────────────<br/>• RAG Pipeline<br/>• TEVV Verifier<br/>• HITL Gateway<br/>• Audit Store"]
+        GenAI["GenAI Platform<br/>────────────<br/>• RAG Pipeline<br/>• Response Validator<br/>• HITL Gateway<br/>• Audit Store"]
     end
 
     EventBus[Event Bus<br/>Apache Kafka]

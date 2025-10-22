@@ -39,7 +39,7 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 
 **AI Quality & Governance:**
 
-- **TEVV Pipeline**: Continuous Test, Evaluate, Validate, Verify process to detect AI misbehavior and ensure quality
+- **Runtime Validation**: Multi-layer quality checks (hallucination detection, confidence calibration, factuality verification) on every AI response
 - **Model Monitoring**: Real-time drift detection, hallucination tracking, and performance degradation alerts
 - **Provider Resilience**: Abstraction layer for LLM providers, shadow mode testing, and graceful degradation strategies
 - **Compliance by Design**: EU AI Act compliance with immutable audit trails, model registry, and human oversight
@@ -49,7 +49,7 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 - **Personalized Engagement**: Tailored recommendations based on individual usage patterns to increase retention
 - **Transparent Pricing**: Natural language explanations for dynamic pricing to build customer trust
 
-**Architectural Differentiator**: Our GenAI Platform operates as an **isolated, observable subsystem** with built-in safeguards—RAG grounding prevents hallucinations, TEVV pipeline ensures quality, immutable audit trails provide compliance, and HITL gates enforce human oversight for safety-critical decisions. This bounded context approach allows us to innovate rapidly with AI while maintaining EU AI Act compliance for high-risk vehicle operations.
+**Architectural Differentiator**: Our GenAI Platform operates as an **isolated, observable subsystem** with built-in safeguards—RAG grounding prevents hallucinations, runtime validation ensures quality, immutable audit trails provide compliance, and HITL gates enforce human oversight for safety-critical decisions. This bounded context approach allows us to innovate rapidly with AI while maintaining EU AI Act compliance for high-risk vehicle operations.
 
 ## Quick Navigation
 
@@ -64,21 +64,12 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 
 ### 🤖 GenAI Strategy (Our Differentiator)
 
-- [GenAI Strategy](GenAI-Strategy/) - **START HERE for innovation**
-  - [Use Cases](GenAI-Strategy/use-cases.md) - Conversational support, incident summarization, anomaly detection
-  - [Value Proposition](GenAI-Strategy/value-proposition.md) - Why GenAI is the competitive advantage
-  - [Architecture Integration](GenAI-Strategy/architecture-integration.md) - How GenAI fits in the system
-  - [AI Risk Classification](GenAI-Strategy/ai-risk-classification.md) - EU AI Act assessment
-
-### ✅ GenAI Verification & Validation
-
-- [GenAI Verification & Validation](GenAI-Verification-Validation/) - **Quality assurance**
-  - [TEVV Overview](GenAI-Verification-Validation/tevv-overview.md) - Test, Evaluate, Validate, Verify
-  - [Testing Strategy](GenAI-Verification-Validation/testing-strategy.md) - Unit, integration, adversarial
-  - [Acceptance Criteria](GenAI-Verification-Validation/acceptance-criteria.md) - Concrete thresholds
-  - [Monitoring Strategy](GenAI-Verification-Validation/monitoring-strategy.md) - Drift, hallucination, metrics
-  - [Continuous Validation](GenAI-Verification-Validation/continuous-validation.md) - Feedback loops
-  - [TEVV Pipeline Diagram](resources/diagrams/tevv-pipeline/tevv-pipeline-flow.md) ⭐
+- **[GenAI Strategy](GenAI-Strategy/README.md)** ⭐ **START HERE** - Complete AI strategy overview
+  - Why GenAI breaks the cost-scaling paradox
+  - Three strategic domains (Fleet Intelligence, Operations & Safety, Customer Experience)
+  - Our competitive edge (RAG, Runtime Validation, HITL, Compliance by Design)
+  - EU AI Act high-risk classification and mandatory controls
+  - Architecture integration as isolated bounded context
 
 ### ⚖️ AI Governance & Compliance
 
@@ -103,7 +94,7 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 - **Scalability**: Independent service scaling, event-driven architecture, horizontal pod autoscaling
 - **Availability**: 99.9% uptime per service, multi-AZ deployment, circuit breakers, graceful degradation
 - **Security**: Zero-trust architecture, encryption at rest/transit, RBAC, prompt injection defense
-- **AI Safety**: TEVV pipeline, HITL gates for high-risk decisions, continuous monitoring ⭐
+- **AI Safety**: Multi-layer runtime validation, HITL gates for high-risk decisions, continuous monitoring ⭐
 - **Explainability**: Natural language explanations, source citations, confidence scores ⭐
 - **Cost Efficiency**: Managed services, auto-scaling, LLM provider abstraction
 
@@ -128,9 +119,8 @@ _Note: Each ADR includes detailed consequences, risks, and mitigation strategies
   - [Context Diagram](resources/diagrams/context/context-diagram.md) - System boundary
   - [Container Diagram](resources/diagrams/container/container-diagram.md) - High-level components
   - [Core Services Diagram](resources/diagrams/container/core-services-container-diagram.md) - Detailed service decomposition
-  - [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) ⭐
+  - [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) ⭐ - Runtime validation & quality gates
   - [RAG Data Flow](resources/diagrams/data-flow/rag-data-flow.md) ⭐
-  - [TEVV Pipeline](resources/diagrams/tevv-pipeline/tevv-pipeline-flow.md) ⭐
   - **Key AI Flows** (Sequence Diagrams):
     - [Conversational Support](resources/diagrams/sequence/conversational-support-flow.md) ⭐
     - [Safety Anomaly Detection](resources/diagrams/sequence/safety-anomaly-detection-flow.md) ⭐
@@ -175,28 +165,19 @@ The GenAI Platform is our key differentiator, implementing responsible AI with s
 
 **Required Controls (All Implemented):**
 
-- ✅ Risk Management System (TEVV Pipeline)
+- ✅ Risk Management System (Runtime validation + pre-deployment testing)
 - ✅ Data Governance (Model Registry)
 - ✅ Technical Documentation (ADRs + Model Cards)
 - ✅ Record-Keeping (Audit Store)
 - ✅ Transparency (Citations + Explanations)
 - ✅ Human Oversight (HITL Gateway)
 - ✅ Accuracy (96.2% factuality)
-- ✅ Robustness (Adversarial testing)
+- ✅ Robustness (Continuous monitoring + shadow testing)
 - ✅ Cybersecurity (Prompt injection defense)
 
 **See:** [EU AI Act Compliance](AI-Governance-Compliance/eu-ai-act-compliance.md)
 
-## Resources
-
-### Documentation
-
-- 📊 [All Architecture Diagrams](resources/README.md)
-- 📝 [Architecture Decision Records](Architecture-Decision-Records/)
-- 🤖 [GenAI Strategy](GenAI-Strategy/)
-- ⚖️ [Compliance Documentation](AI-Governance-Compliance/)
-
-### External References
+## External References
 
 - [C4 Model](https://c4model.com/) - Architecture visualization
 - [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) - AI risk management

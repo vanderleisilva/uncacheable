@@ -134,7 +134,7 @@ EU AI Act compliance isn't an afterthought—it's architected from day one:
 
 ### 3. Continuous AI Quality
 
-TEVV (Test, Evaluate, Validate, Verify) pipeline ensures:
+Runtime validation pipeline ensures:
 
 - 96%+ factuality for AI responses
 - Adversarial testing for prompt injection

@@ -24,14 +24,13 @@ This document outlines MobilityCorp's comprehensive approach to AI governance an
 
 ### 1. Risk Management System (Article 9)
 
-**Implementation**: TEVV (Test, Evaluate, Validate, Verify) Pipeline
+**Implementation**: Runtime Validation + Pre-Deployment Testing
 
 **Components**:
 
-- **Test**: Comprehensive unit and integration testing for all AI components
-- **Evaluate**: Performance benchmarking against accuracy, latency, and fairness metrics
-- **Validate**: Shadow mode testing with real production data
-- **Verify**: Canary deployments with gradual rollout and monitoring
+- **Pre-Deployment Testing**: Shadow mode, canary deployments, benchmark testing before production
+- **Runtime Validation**: Multi-layer quality checks on every AI response (hallucination detection, confidence calibration, factuality verification)
+- **Continuous Monitoring**: Real-time drift detection, performance tracking, and automated alerts
 
 **Risk Identification**:
 
@@ -87,7 +86,8 @@ This document outlines MobilityCorp's comprehensive approach to AI governance an
 - ✅ Model cards for each AI model (see AI Model Documentation)
 - ✅ System design diagrams (C4 model: Context, Container, Component)
 - ✅ API specifications and integration guides
-- ✅ TEVV pipeline documentation
+- ✅ Runtime validation pipeline documentation
+- ✅ Pre-deployment testing procedures
 - ✅ Incident response playbooks
 
 **Documentation Standards**:
@@ -297,7 +297,7 @@ Central system of record for all AI models used in production, supporting:
 **Integration Points**:
 
 - Training pipeline registers models automatically
-- TEVV pipeline queries registry for model metadata
+- Runtime validation queries registry for model metadata
 - Deployment pipeline pulls models from registry
 - Audit system logs model versions for each decision
 
@@ -404,7 +404,7 @@ Immutable, queryable log of all AI interactions to support:
 ### Model Approval Workflow
 
 1. **Development**: Data scientists train and evaluate model
-2. **TEVV Pipeline**: Automated testing (unit, integration, adversarial, fairness)
+2. **Runtime Validation & Pre-Deployment Testing**: Automated quality checks (unit, integration, adversarial, fairness)
 3. **Shadow Mode**: Run in parallel with production (no user impact)
 4. **Review**: Model governance committee reviews metrics, risks, documentation
 5. **Approval**: Sign-off from AI lead, compliance officer, engineering lead
@@ -429,7 +429,7 @@ Immutable, queryable log of all AI interactions to support:
 3. **Mitigation**: Rollback model, increase HITL threshold, disable feature
 4. **Investigation**: Analyze audit logs, model behavior, user impact
 5. **Resolution**: Deploy fix, update documentation, post-mortem
-6. **Prevention**: Update TEVV pipeline, add regression tests
+6. **Prevention**: Update runtime validation checks, add regression tests
 
 ### Continuous Compliance
 
@@ -453,7 +453,7 @@ Immutable, queryable log of all AI interactions to support:
 
 | Role                           | Responsibilities                                          |
 | ------------------------------ | --------------------------------------------------------- |
-| **AI Lead**                    | Model strategy, governance oversight, TEVV pipeline       |
+| **AI Lead**                    | Model strategy, governance oversight, validation pipeline |
 | **Compliance Officer**         | EU AI Act compliance, audit coordination, documentation   |
 | **Data Governance Lead**       | Training data quality, privacy, bias detection            |
 | **Security Lead**              | AI security, prompt injection defense, access controls    |
@@ -469,7 +469,7 @@ Immutable, queryable log of all AI interactions to support:
 - HITL overrides inform model retraining
 - User escalations identify AI failure modes
 - Audit findings drive documentation updates
-- Incident post-mortems update TEVV pipeline
+- Incident post-mortems update runtime validation checks
 
 **Metrics for Governance Health**:
 
