@@ -177,6 +177,7 @@
 - Identify similar historical incidents via RAG
 - Suggest resolution actions based on past incidents
 - Generate time: <10 seconds
+- See [Incident Summarization use case](../resources/diagrams/use-cases/incident-summarization.md) for detailed flow
 
 **REQ-AI-005**: Incident classification
 
