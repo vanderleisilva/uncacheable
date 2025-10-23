@@ -124,6 +124,7 @@ _Note: Each ADR includes detailed consequences, risks, and mitigation strategies
   - [RAG Data Flow](resources/diagrams/data-flow/rag-data-flow.md) ⭐
   - **Key AI Flows**:
     - [Conversational Support](resources/diagrams/use-cases/conversational-support-flow.md) ⭐
+    - [Incident Summarization](resources/diagrams/use-cases/incident-summarization.md) ⭐
     - [Predictive Fleet Positioning](resources/diagrams/use-cases/predictive-fleet-positioning.md) ⭐
     - [Safety Anomaly Detection](resources/diagrams/use-cases/safety-anomaly-detection-flow.md) ⭐
 
