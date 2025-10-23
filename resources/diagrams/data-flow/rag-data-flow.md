@@ -505,6 +505,5 @@ CREATE INDEX ON document_embeddings USING gin(metadata);
 ## References
 
 - See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for RAG components
-- See [ADR-004](../../../Architecture-Decision-Records/004-rag-pattern-for-grounding.md) for RAG strategy rationale
-- See [Conversational Support Flow](../sequence/conversational-support-flow.md) for RAG in action
-- See [Data Architecture](../../../Data-Architecture/rag-index-strategy.md) for indexing details
+- See [ADR-005: RAG Strategy](../../../Architecture-Decision-Records/005-rag-strategy.md) for RAG strategy rationale
+- See [Conversational Support Flow](../use-cases/conversational-support-flow.md) for RAG in action

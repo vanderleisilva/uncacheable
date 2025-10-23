@@ -428,7 +428,7 @@ Answer:`;
 - Experiment with reranking models to improve top-K results
 
 ### Dependencies
-- 
+
 - [Compliance Framework](../AI-Governance-Compliance/compliance-framework.md) - Provenance for audit trails
 
 ### Success Metrics
@@ -446,15 +446,15 @@ Answer:`;
 
 ### ADRs
 
-- [ADR-002: Event-Driven Backbone](003-event-driven-backbone) - Document updates via events
-- [ADR-003: Core Services Architecture](004-core-services-decomposition) - GenAI Platform integration
-- ADR-005: Hallucination Detection (uses RAG sources for verification)
+- [ADR-003: Event-Driven Backbone](003-event-driven-backbone.md) - Document updates via events
+- [ADR-004: Core Services Architecture](004-core-services-decomposition.md) - GenAI Platform integration
+- ADR-006: Hallucination Detection (uses RAG sources for verification)
 
 ### Architecture Views
 
 - [GenAI Component Diagram](../resources/diagrams/genai-subsystem/genai-component-diagram.md) - RAG Retriever component
 - [RAG Data Flow Diagram](../resources/diagrams/data-flow/rag-data-flow.md) - End-to-end RAG flow
-- [Conversational Support Sequence](../resources/diagrams/sequence/conversational-support-flow.md) - RAG in action
+- [Conversational Support Sequence](../resources/diagrams/use-cases/conversational-support-flow.md) - RAG in action
 
 ### Compliance & Governance
 

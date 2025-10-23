@@ -78,7 +78,7 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
     - EU AI Act compliance (risk classification, required controls)
     - Model registry & audit trail design
     - Governance processes & responsibilities
-  - [AI Model Documentation](AI-Governance-Compliance/model-cards/) ⭐
+  - [AI Model Documentation](AI-Governance-Compliance/model-cards.md) ⭐
     - Model cards for all AI models (Conversational Support, Incident Classifier, Safety Detector)
     - Training data provenance & performance metrics
     - Model limitations & bias testing
@@ -107,24 +107,25 @@ MobilityCorp delivers an **AI-augmented operations platform** that reduces costs
 - [Architecture Decision Records](Architecture-Decision-Records/) - **Critical decisions, rationale & tradeoffs**
   - [ADR Template](Architecture-Decision-Records/000-adr-template.md) - Standard format for new ADRs
   - [ADR-001: Combine Microservices, Streaming, and Agentic Architectures for the holistic solution](Architecture-Decision-Records/001-high-level-architecture.md)
-  - [ADR-002: Microservices Architecture](Architecture-Decision-Records/002-microservices-architecture)
-  - [ADR-003: Event-Driven Backbone](Architecture-Decision-Records/003-event-driven-backbone)
-  - [ADR-004: Core Services Architecture](Architecture-Decision-Records/004-core-services-decomposition)
-  - [ADR-005: RAG Strategy](Architecture-Decision-Records/005-rag-strategy) ⭐
+  - [ADR-002: Microservices Architecture](Architecture-Decision-Records/002-microservices-architecture.md)
+  - [ADR-003: Event-Driven Backbone](Architecture-Decision-Records/003-event-driven-backbone.md)
+  - [ADR-004: Core Services Architecture](Architecture-Decision-Records/004-core-services-decomposition.md)
+  - [ADR-005: RAG Strategy](Architecture-Decision-Records/005-rag-strategy.md) ⭐
 
 _Note: Each ADR includes detailed consequences, risks, and mitigation strategies_
 
 ### 🎨 Architecture Views & Diagrams
 
-- [Architecture Views](Architecture-Views/) - **Visual documentation**
+- **Visual documentation**
   - [Context Diagram](resources/diagrams/context/context-diagram.md) - System boundary
   - [Container Diagram](resources/diagrams/container/container-diagram.md) - High-level components
   - [Core Services Diagram](resources/diagrams/container/core-services-container-diagram.md) - Detailed service decomposition
   - [GenAI Component Diagram](resources/diagrams/genai-subsystem/genai-component-diagram.md) ⭐ - Runtime validation & quality gates
   - [RAG Data Flow](resources/diagrams/data-flow/rag-data-flow.md) ⭐
-  - **Key AI Flows** (Sequence Diagrams):
-    - [Conversational Support](resources/diagrams/sequence/conversational-support-flow.md) ⭐
-    - [Safety Anomaly Detection](resources/diagrams/sequence/safety-anomaly-detection-flow.md) ⭐
+  - **Key AI Flows**:
+    - [Conversational Support](resources/diagrams/use-cases/conversational-support-flow.md) ⭐
+    - [Predictive Fleet Positioning](resources/diagrams/use-cases/predictive-fleet-positioning.md) ⭐
+    - [Safety Anomaly Detection](resources/diagrams/use-cases/safety-anomaly-detection-flow.md) ⭐
 
 ### GenAI Platform Architecture
 
@@ -176,14 +177,13 @@ The GenAI Platform is our key differentiator, implementing responsible AI with s
 - ✅ Robustness (Continuous monitoring + shadow testing)
 - ✅ Cybersecurity (Prompt injection defense)
 
-**See:** [EU AI Act Compliance](AI-Governance-Compliance/eu-ai-act-compliance.md)
+**See:** [Compliance & Governance Framework](AI-Governance-Compliance/compliance-framework.md)
 
 ## External References
 
 - [C4 Model](https://c4model.com/) - Architecture visualization
 - [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) - AI risk management
 - [EU AI Act](https://artificialintelligenceact.eu/) - AI regulation
-- [O'Reilly Architecture Katas](https://learning.oreilly.com/live-events/architectural-katas/) - Competition info
 
 ## Team
 

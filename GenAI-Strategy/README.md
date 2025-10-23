@@ -14,7 +14,7 @@ ML and AI optimize vehicle positioning and battery management, transforming reac
 
 ### Operations & Safety
 
-GenAI transforms three critical operational workflows. **Conversational support** handles 40% of customer queries through natural language interaction grounded in official documentation, reducing response times from 15-20 minutes to under 2 seconds while maintaining 96%+ factual accuracy (see [ADR-005: RAG Strategy](../Architecture-Decision-Records/005-rag-strategy)). **Incident summarization** analyzes telemetry, images, and reports to generate structured summaries in under 10 seconds—10x faster than manual investigation—while identifying similar historical incidents through semantic search. **Safety anomaly detection** explains unusual vehicle behavior in natural language with risk scoring, routing high-risk situations through mandatory human approval gates (see [ADR-006: HITL Strategy](../Architecture-Decision-Records/006-hitl-strategy.md)).
+GenAI transforms three critical operational workflows. **Conversational support** handles 40% of customer queries through natural language interaction grounded in official documentation, reducing response times from 15-20 minutes to under 2 seconds while maintaining 96%+ factual accuracy (see [ADR-005: RAG Strategy](../Architecture-Decision-Records/005-rag-strategy.md)). **Incident summarization** analyzes telemetry, images, and reports to generate structured summaries in under 10 seconds—10x faster than manual investigation—while identifying similar historical incidents through semantic search. **Safety anomaly detection** explains unusual vehicle behavior in natural language with risk scoring, routing high-risk situations through mandatory human approval gates.
 
 ### Customer Experience
 
@@ -28,7 +28,7 @@ Most companies add AI as afterthought features. We architect GenAI as a **first-
 
 **Quality Assurance Through Runtime Validation**: Every AI response passes through multiple quality gates before reaching users. Our hallucination detector cross-checks LLM outputs against retrieved facts, blocking responses with unsupported claims. Confidence calibration ensures AI uncertainty is accurately communicated, preventing overconfident wrong answers. Response validators enforce factuality thresholds (>95%) and flag low-confidence outputs for human review. Beyond runtime checks, we employ pre-deployment testing (shadow mode, canary deployments) and continuous monitoring (drift detection, performance tracking) to catch degradation early. See [GenAI Component Diagram](../resources/diagrams/genai-subsystem/genai-component-diagram.md) for the validation architecture.
 
-**Human Oversight Through HITL**: High-risk AI decisions—vehicle immobilization, account suspension, safety alerts—route through mandatory human approval queues. The AI explains its reasoning with source citations and confidence scores, but humans make the final call. This "AI recommends, human decides" pattern satisfies EU AI Act requirements while preventing autonomous AI mistakes in safety-critical scenarios. See [ADR-006: HITL Strategy](../Architecture-Decision-Records/006-hitl-strategy.md).
+**Human Oversight Through HITL**: High-risk AI decisions—vehicle immobilization, account suspension, safety alerts—route through mandatory human approval queues. The AI explains its reasoning with source citations and confidence scores, but humans make the final call. This "AI recommends, human decides" pattern satisfies EU AI Act requirements while preventing autonomous AI mistakes in safety-critical scenarios.
 
 **Compliance Through Audit Trails**: Every AI interaction generates an immutable audit record containing the query, retrieved context, model response, confidence score, and human approval status. This creates a defensible paper trail for regulatory inquiries and customer disputes while satisfying EU AI Act Article 12 (record-keeping) and Article 13 (transparency) requirements. See [Compliance Framework](../AI-Governance-Compliance/compliance-framework.md).
 
@@ -71,6 +71,5 @@ See [Business Case](../Problem-Context/business-case.md) for detailed financial 
 **Related Documentation:**
 
 - [Architecture Decision Records](../Architecture-Decision-Records/) - Technical decisions and rationale
-- [GenAI Verification & Validation](../GenAI-Verification-Validation/) - Quality assurance approach
 - [AI Governance & Compliance](../AI-Governance-Compliance/) - Regulatory compliance framework
 - [Problem Context](../Problem-Context/) - Business requirements and constraints

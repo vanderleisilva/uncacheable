@@ -193,7 +193,7 @@ All model cards follow a standardized structure based on Google's Model Card fra
 
 ### Deployment Phase
 
-6. **TEVV Pipeline**: Test, Evaluate, Validate, Verify
+6. **Runtime Validation Pipeline**: Test, Evaluate, Validate, Verify
 7. **Shadow Mode**: Run in parallel with production (no user impact)
 8. **Model Governance Review**: Committee approval
 9. **Canary Deployment**: Gradual rollout (5% → 25% → 100%)
@@ -263,7 +263,7 @@ All model cards follow a standardized structure based on Google's Model Card fra
 
 ### Decision Criteria
 
-- ✅ TEVV pipeline passes all gates
+- ✅ Runtime validation pipeline passes all gates
 - ✅ Performance meets or exceeds baseline
 - ✅ Fairness metrics within acceptable thresholds
 - ✅ Documentation complete (model card, ADR)
@@ -370,7 +370,6 @@ All model cards follow a standardized structure based on Google's Model Card fra
 
 - [Compliance & Governance Framework](../compliance-framework.md)
 - [Security & Privacy](../security-privacy.md)
-- [TEVV Pipeline Documentation](../../GenAI-Verification-Validation/tevv-overview.md)
 
 ---
 

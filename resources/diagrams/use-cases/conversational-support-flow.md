@@ -204,6 +204,5 @@ If confidence <90%:
 ## References
 
 - See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for component details
-- See [ADR-004](../../../Architecture-Decision-Records/004-rag-pattern-for-grounding.md) for RAG strategy
-- See [Conversational Support Use Case](../../../GenAI-Strategy/use-cases.md#conversational-support)
-- See [TEVV Acceptance Criteria](../../../GenAI-Verification-Validation/acceptance-criteria.md)
+- See [ADR-005: RAG Strategy](../../../Architecture-Decision-Records/005-rag-strategy.md) for RAG strategy
+- See [GenAI Strategy](../../../GenAI-Strategy/README.md) for conversational support use case

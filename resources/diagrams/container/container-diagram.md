@@ -140,8 +140,8 @@ graph TB
 ## References
 
 - See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for detailed GenAI Platform internals
-- See [Core Services Container Diagram](core-services/core-services-container-diagram.md) for detailed core services architecture
+- See [Core Services Container Diagram](core-services-container-diagram.md) for detailed core services architecture
 - See [Deployment Diagram](../deployment/deployment-diagram.md) for infrastructure and hosting
-- See [ADR-002](../../../Architecture-Decision-Records/002-microservices-architecture) for architecture style rationale
-- See [ADR-003](../../../Architecture-Decision-Records/003-event-driven-backbone) for event-driven architecture rationale
-- See [ADR-004](../../../Architecture-Decision-Records/004-core-services-decomposition) for core services decomposition rationale
+- See [ADR-002](../../../Architecture-Decision-Records/002-microservices-architecture.md) for architecture style rationale
+- See [ADR-003](../../../Architecture-Decision-Records/003-event-driven-backbone.md) for event-driven architecture rationale
+- See [ADR-004](../../../Architecture-Decision-Records/004-core-services-decomposition.md) for core services decomposition rationale

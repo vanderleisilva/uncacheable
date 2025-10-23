@@ -289,5 +289,5 @@ sequenceDiagram
 ## References
 
 - See [GenAI Component Diagram](../genai-subsystem/genai-component-diagram.md) for HITL Gateway details
-- See [EU AI Act Compliance](../../../AI-Governance-Compliance/eu-ai-act-compliance.md)
-- See [Safety Anomaly Use Case](../../../GenAI-Strategy/use-cases.md#safety-anomaly-explanation)
+- See [Compliance Framework](../../../AI-Governance-Compliance/compliance-framework.md) for EU AI Act compliance
+- See [GenAI Strategy](../../../GenAI-Strategy/README.md) for safety anomaly detection use case

@@ -370,8 +370,8 @@ User, Booking, and Payment services are:
 
 ### ADRs
 
-- [ADR-002: Microservices Architecture](002-microservices-architecture) - Foundation for service decomposition
-- [ADR-003: Event-Driven Backbone](003-event-driven-backbone) - Service communication pattern
+- [ADR-002: Microservices Architecture](002-microservices-architecture.md) - Foundation for service decomposition
+- [ADR-003: Event-Driven Backbone](003-event-driven-backbone.md) - Service communication pattern
 
 ### External References
 

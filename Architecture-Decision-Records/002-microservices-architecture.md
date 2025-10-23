@@ -170,7 +170,7 @@ We will adopt a **microservices architecture** with the following bounded contex
 
 ### ADRs
 
-- [ADR-002: Event-Driven Backbone](003-event-driven-backbone) - Communication between microservices
+- [ADR-003: Event-Driven Backbone](003-event-driven-backbone.md) - Communication between microservices
 
 ### External References
 
